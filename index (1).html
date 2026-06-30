@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ansh Thakar | AI & ML Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['Space Grotesk', 'sans-serif']
+          },
+          colors: {
+            darkBg: '#030014'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root{
+      --glass: rgba(255,255,255,.04);
+      --glass2: rgba(255,255,255,.025);
+      --border: rgba(255,255,255,.08);
+    }
+    body{
+      background:
+        radial-gradient(circle at 20% 20%, rgba(168,85,247,.14), transparent 30%),
+        radial-gradient(circle at 80% 20%, rgba(59,130,246,.12), transparent 28%),
+        radial-gradient(circle at 50% 90%, rgba(236,72,153,.10), transparent 26%),
+        #030014;
+      overflow-x:hidden;
+    }
+    .glass-card{
+      background: var(--glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      box-shadow: 0 18px 50px rgba(0,0,0,.25);
+      transition: all .35s cubic-bezier(.4,0,.2,1);
+    }
+    .glass-card:hover{
+      transform: translateY(-6px);
+      border-color: rgba(168,85,247,.35);
+      box-shadow: 0 25px 70px rgba(0,0,0,.35);
+    }
+    .text-gradient{
+      background: linear-gradient(135deg,#fff 0%,#c084fc 42%,#60a5fa 100%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    .grid-bg{
+      background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 42px 42px;
+    }
+    .spotlight {
+      background: radial-gradient(circle 700px at var(--x,50%) var(--y,50%), rgba(168,85,247,.15), transparent 65%);
+    }
+    .reveal{
+      opacity:0;
+      transform: translateY(28px);
+      transition: all .8s ease;
+    }
+    .reveal.active{
+      opacity:1;
+      transform: translateY(0);
+    }
+    .tag{
+      display:inline-block;
+      padding: 0.375rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      line-height: 1rem;
+      font-family: 'Space Grotesk', sans-serif;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      color: rgb(209 213 219);
+    }
+    ::-webkit-scrollbar{width:8px}
+    ::-webkit-scrollbar-track{background:#030014}
+    ::-webkit-scrollbar-thumb{background:#2e1065;border-radius:999px}
+    ::-webkit-scrollbar-thumb:hover{background:#6d28d9}
+  </style>
+</head>
+<body class="text-gray-300 font-sans antialiased selection:bg-purple-500/30 selection:text-white">
+
+  <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+  <div class="fixed bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+
+  <nav class="fixed top-0 w-full z-50 glass-card bg-black/20 border-b border-white/5 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="font-mono text-xl font-bold tracking-wider text-white">AT<span class="text-purple-500">.AI</span></a>
+      <div class="hidden md:flex items-center space-x-8 font-mono text-sm tracking-wide">
+        <a href="#about" class="hover:text-purple-400 transition">About</a>
+        <a href="#education" class="hover:text-purple-400 transition">Education</a>
+        <a href="#skills" class="hover:text-purple-400 transition">Skills</a>
+        <a href="#projects" class="hover:text-purple-400 transition">Projects</a>
+        <a href="#certifications" class="hover:text-purple-400 transition">Certificates</a>
+        <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
+      </div>
+      <a href="Ansh_Thakar_Professional_Resume.pdf" target="_blank" class="hidden md:inline-flex items-center justify-center px-4 py-2 border border-purple-500/30 rounded-full font-mono text-xs text-purple-300 bg-purple-500/10 hover:bg-purple-500 hover:text-white transition-all duration-300">
+        Resume
+      </a>
+    </div>
+  </nav>
+
+  <section class="relative min-h-screen flex items-center justify-center grid-bg pt-20 z-10" id="hero">
+    <div class="absolute inset-0 spotlight pointer-events-none" id="hero-spotlight"></div>
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
+      <div class="lg:col-span-7 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-white/10 mb-6 animate-pulse">
+          <span class="w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_10px_#a855f7]"></span>
+          <span class="font-mono text-[11px] md:text-xs tracking-[.22em] text-purple-300 uppercase">Available for Internships</span>
+        </div>
+
+        <h1 class="text-5xl md:text-8xl font-bold tracking-tight text-white mb-6 leading-[.95]">
+          Hi, I'm <span class="text-gradient font-extrabold">Ansh Thakar</span>
+        </h1>
+
+        <p class="font-mono text-lg md:text-2xl text-gray-400 max-w-3xl mb-4 tracking-wide mx-auto lg:mx-0">
+          Diploma in Computer Engineering Student
+        </p>
+
+        <p class="text-lg md:text-xl font-light text-purple-400/90 max-w-2xl mb-10 tracking-wider uppercase font-mono mx-auto lg:mx-0">
+          Aspiring AI • Machine Learning • Data Analyst
+        </p>
+
+        <div class="flex flex-wrap justify-center lg:justify-start gap-3 mb-10">
+          <span class="tag">SSC 90%</span>
+          <span class="tag">Sem 2: 88.67%</span>
+          <span class="tag">Python • ML • Power BI</span>
+          <span class="tag">KJ Somaiya Polytechnic</span>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 font-mono">
+          <a href="#projects" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium rounded-xl hover:opacity-90 shadow-[0_4px_20px_rgba(168,85,247,0.4)] transition-all duration-300 group">
+            View Projects <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+          <a href="Ansh_Thakar_Professional_Resume.pdf" target="_blank" class="w-full sm:w-auto px-8 py-4 glass-card text-white font-medium rounded-xl hover:bg-white/10 transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-file-arrow-down text-purple-400"></i> Download Resume
+          </a>
+          <a href="Video.mp4" target="_blank" class="w-full sm:w-auto px-8 py-4 glass-card text-white font-medium rounded-xl hover:bg-white/10 transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-circle-play text-pink-400"></i> Play Reel
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="glass-card p-4 md:p-5 rounded-[2rem] relative overflow-hidden shadow-2xl">
+          <div class="absolute inset-0 bg-gradient-to-tr from-purple-600/10 via-transparent to-blue-500/10"></div>
+          <div class="relative rounded-[1.6rem] overflow-hidden border border-white/10 bg-black/20">
+            <!-- Replace this path with your actual photo inside Portfolio Assets -->
+            <img src="Anshh.png" alt="Ansh Thakar portrait" class="w-full h-[540px] object-cover object-top"/>
+          </div>
+          <div class="grid grid-cols-2 gap-3 mt-4 relative">
+            <div class="glass-card rounded-2xl p-4">
+              <div class="text-xs font-mono uppercase tracking-[.2em] text-gray-500 mb-2">Focus</div>
+              <div class="text-white font-semibold">AI / ML</div>
+            </div>
+            <div class="glass-card rounded-2xl p-4">
+              <div class="text-xs font-mono uppercase tracking-[.2em] text-gray-500 mb-2">Current</div>
+              <div class="text-white font-semibold">Power BI</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-28 max-w-7xl mx-auto px-6 relative z-10 reveal" id="about">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <div class="lg:col-span-5">
+        <p class="font-mono text-xs uppercase tracking-widest text-purple-500 mb-3">// 01. About Me</p>
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">Building a focused AI/ML profile.</h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 rounded"></div>
+      </div>
+      <div class="lg:col-span-7 glass-card p-8 md:p-10 rounded-3xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-4 font-mono text-sm text-white/5 font-bold select-none text-7xl">AI</div>
+        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+          I am a Diploma in Computer Engineering student who likes learning by building. My current focus is Python, Machine Learning, Data Analysis, Power BI, SQL, and portfolio projects that look clean and professional.
+        </p>
+        <p class="text-gray-400 text-base leading-relaxed">
+          I am not trying to keep beginner clutter in my portfolio. I want a strong, recruiter-friendly website that shows real direction, real skills, and real progress.
+        </p>
+
+        <div class="grid grid-cols-2 gap-4 mt-8 pt-8 border-t border-white/5 text-center sm:text-left">
+          <div>
+            <div class="text-3xl font-mono font-bold text-white tracking-tight">90%</div>
+            <div class="text-xs font-mono text-gray-500 uppercase tracking-widest mt-1">SSC</div>
+          </div>
+          <div>
+            <div class="text-3xl font-mono font-bold text-white tracking-tight">88.67%</div>
+            <div class="text-xs font-mono text-gray-500 uppercase tracking-widest mt-1">Diploma Sem 2</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-28 max-w-7xl mx-auto px-6 relative z-10 reveal" id="education">
+    <div class="text-center mb-16">
+      <p class="font-mono text-xs uppercase tracking-widest text-purple-500 mb-3">// 02. Education</p>
+      <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight">Academic Path</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="glass-card p-6 rounded-3xl">
+        <div class="text-purple-400 text-sm font-mono uppercase tracking-[.2em] mb-3">Current</div>
+        <h3 class="text-white text-xl font-bold mb-2">Diploma in Computer Engineering</h3>
+        <p class="text-gray-400 text-sm mb-4">K. J. Somaiya Polytechnic, Mumbai</p>
+        <p class="text-gray-500 text-sm">Semester 2: 88.67%</p>
+      </div>
+      <div class="glass-card p-6 rounded-3xl">
+        <div class="text-blue-400 text-sm font-mono uppercase tracking-[.2em] mb-3">School</div>
+        <h3 class="text-white text-xl font-bold mb-2">SSC</h3>
+        <p class="text-gray-400 text-sm mb-4">Secondary School Certificate</p>
+        <p class="text-gray-500 text-sm">Score: 90%</p>
+      </div>
+      <div class="glass-card p-6 rounded-3xl">
+        <div class="text-pink-400 text-sm font-mono uppercase tracking-[.2em] mb-3">Direction</div>
+        <h3 class="text-white text-xl font-bold mb-2">Future Goal</h3>
+        <p class="text-gray-400 text-sm mb-4">AI Engineer / ML Engineer / Data Analyst</p>
+        <p class="text-gray-500 text-sm">Building skills through projects + internships</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-28 max-w-7xl mx-auto px-6 relative z-10 reveal" id="skills">
+    <div class="text-center mb-16">
+      <p class="font-mono text-xs uppercase tracking-widest text-purple-500 mb-3">// 03. Technical Stack</p>
+      <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight">Engineered Core Competencies</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="glass-card p-6 rounded-3xl">
+        <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6 text-xl"><i class="fa-solid fa-code"></i></div>
+        <h3 class="font-mono text-lg font-semibold text-white mb-4">Programming</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">Python</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">SQL</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">JavaScript</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">HTML/CSS</span>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 rounded-3xl">
+        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6 text-xl"><i class="fa-solid fa-chart-pie"></i></div>
+        <h3 class="font-mono text-lg font-semibold text-white mb-4">Data Analysis</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">NumPy</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">Pandas</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">Matplotlib</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">Seaborn</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">Power BI</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">Excel</span>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 rounded-3xl">
+        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-6 text-xl"><i class="fa-solid fa-brain"></i></div>
+        <h3 class="font-mono text-lg font-semibold text-white mb-4">Machine Learning</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">Scikit-learn</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">EDA</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">Feature Eng.</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">Pipelines</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">ColumnTransformer</span>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 rounded-3xl">
+        <div class="w-12 h-12 rounded-xl bg-pink-500/10 flex items-center justify-center text-pink-400 mb-6 text-xl"><i class="fa-solid fa-terminal"></i></div>
+        <h3 class="font-mono text-lg font-semibold text-white mb-4">Tools</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">VS Code</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">Git</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">GitHub</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 font-mono text-xs text-gray-300">Jupyter</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-28 max-w-7xl mx-auto px-6 relative z-10 reveal" id="projects">
+    <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-16">
+      <div>
+        <p class="font-mono text-xs uppercase tracking-widest text-purple-500 mb-3">// 04. Featured Work</p>
+        <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight">Selected Projects</h2>
+      </div>
+      <p class="font-mono text-sm text-gray-500 mt-4 md:mt-0 max-w-md">Only strong, relevant work. No beginner clutter.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-6">
+            <span class="text-xs font-mono px-2.5 py-1 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">Custom AI Build</span>
+            <div class="flex space-x-3 text-gray-400">
+              <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3 tracking-tight group-hover:text-purple-400 transition-colors">Jarvis AI Assistant</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">A self-built Python assistant that handles voice-driven system actions and automation workflows.</p>
+        </div>
+        <div class="px-6 pb-6 mt-auto">
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Python</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Automation</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Speech API</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-6">
+            <span class="text-xs font-mono px-2.5 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Data Pipeline</span>
+            <div class="flex space-x-3 text-gray-400">
+              <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3 tracking-tight group-hover:text-blue-400 transition-colors">IBM Attrition Pipeline</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">End-to-end classification pipeline using ColumnTransformer, preprocessing, and model serialization for attrition prediction.</p>
+        </div>
+        <div class="px-6 pb-6 mt-auto">
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Sklearn</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Pipelines</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Pickle</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-6">
+            <span class="text-xs font-mono px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Predictive ML</span>
+            <div class="flex space-x-3 text-gray-400">
+              <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3 tracking-tight group-hover:text-emerald-400 transition-colors">Employee Attrition Classifier</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">Risk classification project for predicting employee attrition using feature engineering and model evaluation.</p>
+        </div>
+        <div class="px-6 pb-6 mt-auto">
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Classification</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">EDA</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Feature Eng.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-6">
+            <span class="text-xs font-mono px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">Deep Analysis</span>
+            <div class="flex space-x-3 text-gray-400">
+              <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3 tracking-tight group-hover:text-amber-400 transition-colors">Titanic Advanced EDA</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">A polished notebook focused on exploration, missing values, correlations, and observation writing.</p>
+        </div>
+        <div class="px-6 pb-6 mt-auto">
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Pandas</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Matplotlib</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">EDA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-6">
+            <span class="text-xs font-mono px-2.5 py-1 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Data Harvesting</span>
+            <div class="flex space-x-3 text-gray-400">
+              <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3 tracking-tight group-hover:text-cyan-400 transition-colors">Web Scraping Engine</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">A Python scraping workflow that converts unstructured web data into analysis-ready tabular form.</p>
+        </div>
+        <div class="px-6 pb-6 mt-auto">
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">BeautifulSoup</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Requests</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Automation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-6">
+            <span class="text-xs font-mono px-2.5 py-1 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20">Predictive ML</span>
+            <div class="flex space-x-3 text-gray-400">
+              <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3 tracking-tight group-hover:text-rose-400 transition-colors">Placement Prediction Machine</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">A classification model that maps academic and skill features to placement probability.</p>
+        </div>
+        <div class="px-6 pb-6 mt-auto">
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">ML</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Sklearn</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Classification</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-6">
+            <span class="text-xs font-mono px-2.5 py-1 rounded bg-violet-500/10 text-violet-400 border border-violet-500/20">Analytics</span>
+            <div class="flex space-x-3 text-gray-400">
+              <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3 tracking-tight group-hover:text-violet-400 transition-colors">Data Storytelling Case Study</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">A clean slot for future business dashboards, reporting, and Power BI storytelling work.</p>
+        </div>
+        <div class="px-6 pb-6 mt-auto">
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Power BI</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Excel</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">SQL</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-28 max-w-7xl mx-auto px-6 relative z-10 reveal" id="certifications">
+    <div class="text-center mb-16">
+      <p class="font-mono text-xs uppercase tracking-widest text-purple-500 mb-3">// 05. Certificates</p>
+      <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight">Only Strong Credentials</h2>
+      <p class="text-gray-500 mt-4 max-w-2xl mx-auto text-sm">Keep only the certificates that strengthen the story. Remove beginner clutter.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-lg flex-shrink-0"><i class="fa-solid fa-building-shield"></i></div>
+        <div>
+          <h3 class="font-bold text-white text-base">Deloitte Job Simulation</h3>
+          <p class="text-gray-500 text-xs font-mono mt-1">Forage</p>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-lg flex-shrink-0"><i class="fa-solid fa-chart-line"></i></div>
+        <div>
+          <h3 class="font-bold text-white text-base">Tata Job Simulation</h3>
+          <p class="text-gray-500 text-xs font-mono mt-1">Data / analytics relevant</p>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 text-lg flex-shrink-0"><i class="fa-solid fa-terminal"></i></div>
+        <div>
+          <h3 class="font-bold text-white text-base">Microsoft Prompt Engineering</h3>
+          <p class="text-gray-500 text-xs font-mono mt-1">GenAI workflow</p>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-lg flex-shrink-0"><i class="fa-brands fa-kaggle"></i></div>
+        <div>
+          <h3 class="font-bold text-white text-base">Kaggle Python</h3>
+          <p class="text-gray-500 text-xs font-mono mt-1">Foundational Python</p>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-yellow-500/10 flex items-center justify-center text-yellow-400 text-lg flex-shrink-0"><i class="fa-brands fa-kaggle"></i></div>
+        <div>
+          <h3 class="font-bold text-white text-base">Kaggle Machine Learning</h3>
+          <p class="text-gray-500 text-xs font-mono mt-1">Core ML basics</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-28 max-w-5xl mx-auto px-6 relative z-10 text-center reveal" id="contact">
+    <p class="font-mono text-xs uppercase tracking-widest text-purple-500 mb-3">// 06. Contact</p>
+    <h2 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">Let's connect</h2>
+    <p class="text-gray-400 max-w-xl mx-auto mb-10">For internships, collaborations, or project discussions, use the links below.</p>
+
+    <div class="inline-flex flex-wrap items-center justify-center gap-4 p-4 rounded-2xl glass-card bg-white/[0.01]">
+      <a href="mailto:anshthakar791@gmail.com" class="px-6 py-3 rounded-xl bg-white/5 border border-white/5 font-mono text-sm text-white hover:bg-purple-500 hover:text-white transition flex items-center gap-2">
+        <i class="fa-solid fa-envelope text-purple-400"></i> Gmail
+      </a>
+      <a href="https://www.linkedin.com/in/ansh-thakar/" target="_blank" class="px-6 py-3 rounded-xl bg-white/5 border border-white/5 font-mono text-sm text-white hover:bg-blue-600 hover:text-white transition flex items-center gap-2">
+        <i class="fa-brands fa-linkedin text-blue-400"></i> LinkedIn
+      </a>
+      <a href="https://github.com/ansh-thakar" target="_blank" class="px-6 py-3 rounded-xl bg-white/5 border border-white/5 font-mono text-sm text-white hover:bg-zinc-800 hover:text-white transition flex items-center gap-2">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+       <a href="https://drive.google.com/drive/folders/1pDX6iwf-iTXiX4gfzy68L4vfpA4YHo8L?usp=drive_link" target="_blank" class="px-6 py-3 rounded-xl bg-white/5 border border-white/5 font-mono text-sm text-white hover:bg-zinc-800 hover:text-white transition flex items-center gap-2">
+        <i class="fa-brands fa-github"></i> Certifactes Drive
+      </a>
+      <a href="Portfolio%20Assets/Resume.pdf" target="_blank" class="px-6 py-3 rounded-xl bg-white/5 border border-white/5 font-mono text-sm text-white hover:bg-purple-500 hover:text-white transition flex items-center gap-2">
+        <i class="fa-solid fa-file-arrow-down text-purple-400"></i> Resume
+      </a>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/5 py-8 text-center font-mono text-xs text-gray-600 relative z-10">
+    &copy; 2026 Ansh Thakar. Built for focused execution.
+  </footer>
+
+  <script>
+    const spotlight = document.getElementById('hero-spotlight');
+    window.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      spotlight.style.setProperty('--x', `${x}%`);
+      spotlight.style.setProperty('--y', `${y}%`);
+    });
+
+    function reveal() {
+      const reveals = document.querySelectorAll(".reveal");
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) reveals[i].classList.add("active");
+      }
+    }
+    window.addEventListener("scroll", reveal);
+    setTimeout(reveal, 200);
+  </script>
+</body>
+</html>
