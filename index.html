@@ -159,7 +159,6 @@
         <div class="glass-card p-4 md:p-5 rounded-[2rem] relative overflow-hidden shadow-2xl">
           <div class="absolute inset-0 bg-gradient-to-tr from-purple-600/10 via-transparent to-blue-500/10"></div>
           <div class="relative rounded-[1.6rem] overflow-hidden border border-white/10 bg-black/20">
-            <!-- Replace this path with your actual photo inside Portfolio Assets -->
             <img src="Anshh.png" alt="Ansh Thakar portrait" class="w-full h-[540px] object-cover object-top"/>
           </div>
           <div class="grid grid-cols-2 gap-3 mt-4 relative">
@@ -189,7 +188,6 @@
         <p class="text-gray-300 text-lg leading-relaxed mb-6">
         I am a Diploma in Computer Engineering student at K. J. Somaiya Polytechnic with a strong interest in Artificial Intelligence, Machine Learning, and Data Science. I have built a solid foundation in Python, SQL, NumPy, Pandas, Matplotlib, Seaborn, data preprocessing, feature engineering, and exploratory data analysis. I have also learned key machine learning preprocessing techniques, including handling missing values, encoding categorical data, scaling, feature transformation, and building data pipelines using Scikit-learn. I enjoy solving real-world problems through data-driven solutions and developing practical end-to-end projects. I am eager to apply my technical skills, learn from experienced professionals, and contribute to impactful AI and Machine Learning projects while continuously expanding my knowledge
         </p>
-        </div>
       </div>
     </div>
   </section>
@@ -206,7 +204,6 @@
         <p class="text-gray-400 text-sm mb-4">K. J. Somaiya Polytechnic, Mumbai</p>
         <p class="text-gray-500 text-sm">Semester 1: 88.13%</p>
         <p class="text-gray-500 text-sm">Semester 2: 88.67%</p>
-        
       </div>
       <div class="glass-card p-6 rounded-3xl">
         <div class="text-blue-400 text-sm font-mono uppercase tracking-[.2em] mb-3">School</div>
@@ -280,13 +277,37 @@
   <section class="py-28 max-w-7xl mx-auto px-6 relative z-10 reveal" id="projects">
     <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-16">
       <div>
-        <p class="font-mono text-xs uppercase tracking-widest text-purple-500 mb-3">//  Featured Work</p>
+        <p class="font-mono text-xs uppercase tracking-widest text-purple-500 mb-3">// Featured Work</p>
         <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight">Projects</h2>
       </div>
       <p class="font-mono text-sm text-gray-500 mt-4 md:mt-0 max-w-md">Only strong, relevant work.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group border-purple-500/30 bg-purple-950/5">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-6">
+            <span class="text-xs font-mono px-2.5 py-1 rounded bg-purple-500/20 text-purple-300 border border-purple-500/40">Live Full-Stack App</span>
+            <div class="flex space-x-3 text-gray-400">
+              <a href="https://github.com/ansh-thakar" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+              <a href="https://ansh-thakar-ibm-predictor.streamlit.app/" target="_blank" class="hover:text-purple-400 transition"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3 tracking-tight group-hover:text-purple-400 transition-colors">IBM Employee Attrition Predictor</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">A live dashboard predicting staff retention risks. Features optimized user UX by parsing 35 source columns down to 7 key dynamic inputs, substituting missing rows via pipeline statistical baselines.</p>
+        </div>
+        <div class="px-6 pb-6 mt-auto">
+          <div class="flex flex-wrap gap-1.5 mb-4">
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-300">Streamlit Cloud</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Scikit-Learn</span>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Pipelines</span>
+          </div>
+          <a href="https://ansh-thakar-ibm-predictor.streamlit.app/" target="_blank" class="inline-flex items-center text-xs font-mono text-purple-300 hover:text-purple-100 transition-all">
+            Launch Live Website <i class="fa-solid fa-chevron-right ml-1 text-[10px]"></i>
+          </a>
+        </div>
+      </div>
 
       <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group">
         <div class="p-6">
@@ -316,37 +337,6 @@
               <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
             </div>
           </div>
-          <h3 class="text-xl font-bold text-white mb-3 tracking-tight group-hover:text-blue-400 transition-colors">IBM Attrition Pipeline</h3>
-          <p class="text-gray-400 text-sm leading-relaxed mb-6">End-to-end classification pipeline using ColumnTransformer, preprocessing, and model serialization for attrition prediction.</p>
-        </div>
-        <div class="px-6 pb-6 mt-auto">
-          <div class="flex flex-wrap gap-1.5">
-            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Sklearn</span>
-            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Pipelines</span>
-            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Pickle</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-        <div class="p-6">
-          <div class="flex justify-between items-start mb-6">
-            <span class="text-xs font-mono px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Predictive ML</span>
-            <div class="flex space-x-3 text-gray-400">
-              <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
-            </div>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3 tracking-tight group-hover:text-emerald-400 transition-colors">Employee Attrition Classifier</h3>
-          <p class="text-gray-400 text-sm leading-relaxed mb-6">Risk classification project for predicting employee attrition using feature engineering and model evaluation.</p>
-        </div>
-        <div class="px-6 pb-6 mt-auto">
-          <div class="flex flex-wrap gap-1.5">
-            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Classification</span>
-            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">EDA</span>
-            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">Feature Eng.</span>
-          </div>
-        </div>
-      </div>
 
       <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group">
         <div class="p-6">
@@ -408,34 +398,13 @@
         </div>
       </div>
 
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-        <div class="p-6">
-          <div class="flex justify-between items-start mb-6">
-            <span class="text-xs font-mono px-2.5 py-1 rounded bg-violet-500/10 text-violet-400 border border-violet-500/20">Analytics</span>
-            <div class="flex space-x-3 text-gray-400">
-              <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
-            </div>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3 tracking-tight group-hover:text-violet-400 transition-colors">Data Storytelling Case Study</h3>
-          <p class="text-gray-400 text-sm leading-relaxed mb-6">A clean slot for future business dashboards, reporting, and Pandas storytelling work.</p>
-        </div>
-        <div class="px-6 pb-6 mt-auto">
-          <div class="flex flex-wrap gap-1.5">
-            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">MATPLOTLIB,SEABORN</span>
-            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">PANDAS</span>
-            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400">NUMPY</span>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
   <section class="py-28 max-w-7xl mx-auto px-6 relative z-10 reveal" id="certifications">
     <div class="text-center mb-16">
-      <p class="font-mono text-xs uppercase tracking-widest text-purple-500 mb-3">//  Certificates</p>
+      <p class="font-mono text-xs uppercase tracking-widest text-purple-500 mb-3">// Certificates</p>
       <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight">Only Strong Credentials</h2>
-     
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -475,7 +444,7 @@
         <div class="w-12 h-12 rounded-xl bg-yellow-500/10 flex items-center justify-center text-yellow-400 text-lg flex-shrink-0"><i class="fa-brands fa-kaggle"></i></div>
         <div>
           <h3 class="font-bold text-white text-base">Kaggle Machine Learning</h3>
-          <p class="text-gray-500 text-xs font-mono mt-1">Core ML basics</p>
+          <p class="text-gray-500 text-xs font-mono mt-1">Core ML Intermidate</p>
         </div>
       </div>
     </div>
@@ -497,7 +466,7 @@
         <i class="fa-brands fa-github"></i> GitHub
       </a>
        <a href="https://drive.google.com/drive/folders/1pDX6iwf-iTXiX4gfzy68L4vfpA4YHo8L?usp=drive_link" target="_blank" class="px-6 py-3 rounded-xl bg-white/5 border border-white/5 font-mono text-sm text-white hover:bg-zinc-800 hover:text-white transition flex items-center gap-2">
-        <i class="fa-brands fa-github"></i> Certifactes Drive
+        <i class="fa-brands fa-github"></i> Certificates Drive
       </a>
       <a href="Portfolio%20Assets/Resume.pdf" target="_blank" class="px-6 py-3 rounded-xl bg-white/5 border border-white/5 font-mono text-sm text-white hover:bg-purple-500 hover:text-white transition flex items-center gap-2">
         <i class="fa-solid fa-file-arrow-down text-purple-400"></i> Resume
