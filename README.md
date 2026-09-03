@@ -1,1 +1,32 @@
-Welcome to my personal portfolio repository! This portfolio represents my journey as a Diploma in Computer Engineering student with a passion for Artificial Intelligence, Machine Learning, Data Analytics, and Software Development. It has been designed to showcase my technical skills, featured projects, certifications, education, achievements, and continuous learning through a modern, responsive, and interactive website. The portfolio reflects my commitment to building practical solutions using Python, SQL, Power BI, Scikit-learn, NumPy, Pandas, Matplotlib, Seaborn, HTML, CSS, and JavaScript. My featured projects include machine learning models, exploratory data analysis, intelligent automation, web scraping, AI assistants, and data-driven applications that solve real-world problems. Rather than including every project I have created, I have carefully selected only my strongest work to maintain a professional and focused portfolio. The website also highlights certifications from recognized organizations including Microsoft, Deloitte, Tata, and Kaggle, demonstrating my dedication to continuous learning and industry-relevant skills. Built with a premium dark theme, smooth animations, modern UI, and responsive design, this portfolio delivers an engaging experience across desktop, tablet, and mobile devices. It is hosted using GitHub Pages and will continue to evolve as I complete advanced AI, Machine Learning, Data Science, MLOps, Cloud Computing, and Full Stack Development projects. My long-term goal is to become an AI and Machine Learning Engineer who develops intelligent, scalable, and impactful solutions for real-world challenges. This repository serves not only as a showcase of my current abilities but also as a record of my growth as a developer and lifelong learner. I am always open to internships, collaborations, open-source contributions, and opportunities to learn from experienced professionals. Thank you for taking the time to explore my portfolio. I hope my work reflects my curiosity, consistency, and dedication to continuously improving my technical expertise while creating meaningful technology that makes a positive impact.
+# Ansh Thakar — AI & Machine Learning Portfolio
+
+A modern, responsive portfolio website showcasing production Machine Learning models, Generative AI engines, and Data Analytics dashboards built with a dark glassmorphism theme and interactive UI accents.
+
+---
+
+## 🚀 Live Project Demos
+
+* **Real-Time Financial Fraud Detection:** [Live Web App](https://paysim-fraud-detection-dshy.onrender.com/) | [GitHub Repository](https://github.com/ansh-thakar)
+* **DataPilot AI Workstation:** [Live Web App](https://datapilotai7.streamlit.app/) | [GitHub Repository](https://github.com/ansh-thakar/datapilot_ai)
+* **Used Car Price Predictor:** [Live Web App](https://car-price-predictor9.streamlit.app/)
+* **IBM Employee Attrition Predictor:** [Live Web App](https://ansh-thakar-ibm-predictor.streamlit.app/)
+
+---
+
+## 🛠️ Technical Stack
+
+* **Languages:** Python, C, C++, SQL, Bash / Shell
+* **Data Science & ML:** Scikit-Learn, XGBoost, Pandas, NumPy, Matplotlib, Seaborn
+* **Deployment & Microservices:** Docker, FastAPI, Streamlit, Render, GitHub Pages
+* **Business Intelligence:** Power BI, DAX
+
+---
+
+## 📁 Repository Structure
+
+```text
+.
+├── index.html                           # Portfolio website source code
+├── Ansh_Thakar_Professional_Resume.pdf  # Downloadable PDF resume
+├── Anshh.png                            # Profile portrait asset
+└── README.md                            # Documentation
