@@ -18,7 +18,6 @@ Here are the core end-to-end systems I have engineered and deployed:
 | :--- | :--- | :--- |
 | **Real-Time Financial Fraud Detection** | XGBoost, FastAPI, Docker, Streamlit | [Live App](https://paysim-fraud-detection-dshy.onrender.com/) • [GitHub](https://github.com/ansh-thakar) |
 | **DataPilot AI Workstation** | Streamlit, Gemini API, Scikit-Learn | [Live App](https://datapilotai7.streamlit.app/) • [GitHub](https://github.com/ansh-thakar/datapilot_ai) |
-| **Retail Sales Performance Dashboard** | Power BI, DAX, Advanced SQL | [View Dashboard Repository](https://github.com/ansh-thakar) *(Update Link)* |
 
 ---
 
